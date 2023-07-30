@@ -1,0 +1,144 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*This will make the output of our components align centrally on our horizontal axis.*/
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items-not-ranked{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.unranked-cell{
+    width:80px;
+    text-align: center;
+    margin-left: 3px;
+}
+
+.unranked-cell img , .rank-cell img{
+    width: 100%;
+    height: 100%;
+}
+
+.rankings{
+    width :880px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: center;
+    margin-bottom: 15px;
+}
+
+/* The below code all relates to the ranking grid component RankingGrid.js and its function createRowsForGrid.*/
+.rank-row{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+.top-tier {
+    background-color: yellow;
+}
+
+.middle-tier {
+    background-color: greenyellow;
+}
+
+.bottom-tier {
+    background-color: brown;
+}
+
+.worst-tier {
+    background-color: red;
+}
+
+.rank-cell, .row-label {
+    width: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* <!-- HTML ! -->
+<button class="button-85" role="button" > Button 85</button > All instances of button-85 changed to reload.
+ CSS */
+.reload {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.reload:before {
+    content: "";
+    background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-reload 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-reload {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.reload:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
